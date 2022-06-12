@@ -1,0 +1,16 @@
+{
+    "name": "Product",
+    "sections": {
+      "main": {
+        "type": "product-template"
+      },
+      "recommendations": {
+        "type": "product-recommendations"
+      }
+    },
+    "order": [
+      "main",
+      "recommendations"
+    ]
+  }
+  
