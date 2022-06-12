@@ -13,8 +13,7 @@
     assign product_image_zoom_size = '1024x1024'
     assign product_image_scale = '2'
     assign enable_image_zoom = section.settings.enable_image_zoom
-    assign compare_at_price = current_variant.compare_at_price
-    assign price = current_variant.price -%}
+   -%}
 
   {%- liquid
      case section.settings.media_size
@@ -103,7 +102,7 @@
                         {%- endif -%}
                       {%- endcapture -%}
 
-                      <img class="product-single__thumbnail-image" src="{{ media.preview_image | img_url: '110x110', scale: 2 }}" height="" width="" alt="{{ thumbnailAlt }}">
+                      <img class="product-single__thumbnail-image" src="{{ media.preview_image | img_url: '110x110', scale: 2 }}" height="" width="" alt="{{ thumbnailAlt }}" loading="lazy">
                       {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
                         <div class="product-single__thumbnail-badge">
                           {% render 'icon-video-badge-full-color' %}

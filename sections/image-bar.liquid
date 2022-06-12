@@ -22,11 +22,12 @@
                style="background-position: {{ block.settings.alignment }};"
                data-image-loading-animation>
       {% elsif block.settings.image != blank %}
-        <div class="image-bar__item image-bar__item--{{ block.id }} box ratio-container lazyload"
+        <div class="image-bar__item image-bar__item--{{ block.id }} box ratio-container"
              data-bgset="{% render 'bgset', image: block.settings.image %}"
              data-sizes="auto"
              data-parent-fit="cover"
              style="background-position: {{ block.settings.alignment }};"
+             loading="lazy"
              data-image-loading-animation>
       {% else %}
         <div class="image-bar__item">
